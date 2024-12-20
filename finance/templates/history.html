@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<h3 class="pb-5">History</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Operation</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for row in operations %}
+            <!-- [{'buy_id': 1, 'user_id': 1, 'symbol': 'NFLX', 'price': 687.92, 'shares': 1, 'date': '2024-09-03 14:02:23'},
+             {'buy_id': 2, 'user_id': 1, 'symbol': 'NFLX', 'price': 683.87, 'shares': 1, 'date': '2024-09-03 14:02:47'},
+             {'buy_id': 3, 'user_id': 1, 'symbol': 'NFLX', 'price': 678.75, 'shares': 1, 'date': '2024-09-03 16:29:38'},
+             {'buy_id': 4, 'user_id': 1, 'symbol': 'NFLX', 'price': 679.97, 'shares': 1, 'date': '2024-09-03 16:35:37'},
+             {'buy_id': 5, 'user_id': 1, 'symbol': 'NFLX', 'price': 679.83, 'shares': 1, 'date': '2024-09-03 16:38:25'},
+             {'buy_id': 6, 'user_id': 1, 'symbol': 'NVDA', 'price': 110.34, 'shares': 1, 'date': '2024-09-03 17:21:30'},
+             {'buy_id': 7, 'user_id': 1, 'symbol': 'NFLX', 'price': 675.32, 'shares': -1, 'date': '2024-09-03 21:26:57'}] -->
+
+                    <tr>
+                        <td>{% if row["shares"] > 0 %}Buy{% else %}Sell{% endif %}</td>
+                        <td>{{ row["symbol"] }}</td>
+                        <td>{{ row["price"] | usd}}</td>
+                        <td>{% if row["shares"] > 0 %}{{ row["shares"] }}{% else %}{{ row["shares"] * (-1) }}{% endif %}</td>
+                        <td>{{ row["date"] }}</td>
+                    </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

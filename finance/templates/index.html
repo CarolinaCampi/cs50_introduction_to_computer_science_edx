@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<h3 class="pb-5">My Shares</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for row in table %}
+            <!--table = [{'symbol': 'NFLX', 'SUM(shares)': 5, 'price': 678.37}, {'symbol': 'NVDA', 'SUM(shares)': 1, 'price': 110.08}] -->
+                {% if row["SUM(shares)"] != 0 %}
+                    <tr>
+                        <td>{{ row["symbol"] }}</td>
+                        <td>{{ row["SUM(shares)"] }}</td>
+                        <td>{{ (row["price"] | usd) }}</td>
+                        <td>{{ ((row["price"]) * (row["SUM(shares)"])) | usd }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+        <tfoot class="table-group-divider">
+            <tr>
+                <th scope="row" colspan="3" class="text-end">Cash</th>
+                <td>{{ cash | usd }}</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="3" class="text-end">TOTAL</th>
+                <td>{{ total | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
