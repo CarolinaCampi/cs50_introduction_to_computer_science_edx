@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: The sort1 algorith seemed to perform best of all with a sorted list, but not as well as sort2 in a reversed list (worth case). This aligns with the fact that bbuble sort algorithms do well with best cases, sorted lists, but have o(n squared, n^2) on worst cases like a reversed list.
+
+sort2 uses: merge sort
+
+How do you know?: The sort2 algorith seemed to perform in the middle with best cases and best of the three with worst cases. This shows that, out of the three, it works faster in worst cases, like a reversed list due to the fact that it has O(n log n)
+
+sort3 uses: selection sort
+
+How do you know?: The sort3 algorithm performed the owrst on an already sorted list. Given that in the best case, an already sorted list, it still needs to go through the iterations, it takes the longest to confirm that it's a sorted list (it has an omega of n squared, n^2).
