@@ -1,0 +1,42 @@
+ /* GLOBAL STYLES */
+
+ body {
+    font-family: Georgia, serif;
+  }
+
+ /* NAVBAR */
+ nav {
+    background-color: #EDF8FF;
+ }
+
+ /* FOOTER */
+ footer {
+    background-color: #EDF8FF;
+ }
+
+ /* SECTION HEADERS */
+ h4 {
+    color: #4062BB;
+    padding-bottom: 1rem;
+    border-bottom-style: dashed;
+    border-color: #52489C;
+ }
+
+ /* HOME */
+ .home-card {
+    background-color: #e9f7ef;
+ }
+
+ #surprise {
+    visibility: hidden;
+ }
+
+ /* ABOUT */
+ .about-card {
+    border-color: #1e8449;
+ }
+
+
+ /* HOBBIES */
+
+ /* SECTION */

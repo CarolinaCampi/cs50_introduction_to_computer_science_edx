@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Caro's Webpage</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                  <a class="navbar-brand" href="./index.html">
+                    <img src="/caro_s_homepage_cs50.png" alt="Logo" width="45" height="45" class="d-inline-block align-middle rounded-circle">
+                    Caro's Page</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="justify-content-end collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./about.html" class="nav-link">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./hobbies.html" class="nav-link">Hobbies</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./favourites.html" class="nav-link">Favourites</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+            <div class="container-fluid p-5">
+                <h4>Hobbies</h4>
+                <section class="py-3">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Sewing
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                          <p>I started to sew when I was 12, when a friend of mine invited me to the classes she was taking.
+                            It took some years to finally start making actually wearable clothes but I haven't stopped since. I love it.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Travelling
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p>My parents have always prioritized travelling, with destinations close and far.
+                                And my sisters and I are exactly the same on that respect.
+                                Be it with family friends, or by myself, i'm always thinking about the next trip.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Reading
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p>I always joke that its my favourite thing to do and that my Kindle is my most proced possession. Or am i joking?
+                                No day is complete without some reading at the end of it to unwind and escape for a bit.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+        </main>
+        <footer class="fixed-bottom justify-content-center p-1 d-flex">Made by <a href="https://github.com/CarolinaCampi">CC</a></footer>
+    </body>
+</html>

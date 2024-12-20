@@ -1,0 +1,11 @@
+Specifications:
+
+HTML tags: <section>, <img>, <nav>, <ul>, <h3>, <button>, <a>, <span>, <p>, <figure>.
+
+CSS selectors: body, nav, footer, h4, .surprise.
+
+CSS properties: color, background-color, visibility, border-color, padding.
+
+JavaScript: I used JavaScript to change the visibility of a <section> element and to change the text of a <button> element, when clicked.
+
+Bootstrap: I used bootstrap to streamline the styles of the page, the responsiveness using the breakpoints and take advantage of the built in animations and smoothness of use.
