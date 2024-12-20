@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <button id="incorrect1">6 people per 1 sheep</button>
+                <button id="incorrect2">3 people per 1 sheep</button>
+                <button id="incorrect3">1 person per 1 sheep</button>
+                <button id="incorrect4">1 person per 3 sheep</button>
+                <button id="correct1">1 person per 6 sheep</button>
+                <p id="result1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as one lone guinea pig might get lonely?
+                </h3>
+                <form>
+                    <input autocomplete="off" autofocus id="country2" type="text">
+                    <button type="submit">Check answer</button>
+                </form>
+                <p id="result2"></p>
+            </div>
+        </div>
+
+        <script>
+            // TODO: Add code to check answers to questions
+            // Function that prints the answer
+            function printAnswer(answer, selector) {
+                if (answer === 'correct') {
+                    document.querySelector(selector).innerHTML = "Correct!";
+                } else {
+                    document.querySelector(selector).innerHTML = "Incorrect";
+                }
+            }
+
+            function changeColor(selector, color){
+                document.querySelector(selector).style.backgroundColor = color;
+            }
+
+            document.querySelector('#correct1').onclick = function() {
+                printAnswer('correct', '#result1');
+                changeColor('#correct1', 'green');
+            }
+
+            document.querySelector('#incorrect1').onclick = function() {
+                printAnswer('incorrect', '#result1');
+                changeColor('#incorrect1', 'red');
+            }
+            document.querySelector('#incorrect2').onclick = function() {
+                printAnswer('incorrect', '#result1');
+                changeColor('#incorrect2', 'red');
+            }
+            document.querySelector('#incorrect3').onclick = function() {
+                printAnswer('incorrect', '#result1');
+                changeColor('#incorrect3', 'red');
+            }
+            document.querySelector('#incorrect4').onclick = function() {
+                printAnswer('incorrect', '#result1');
+                changeColor('#incorrect4', 'red');
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('submit', function(e) {
+                    if (document.querySelector('#country2').value == 'Switzerland') {
+                        printAnswer('correct', '#result2');
+                        changeColor('input', 'green');
+                    }
+                    else {
+                        printAnswer('incorrect', '#result2');
+                        changeColor('input', 'red');
+                    }
+                    e.preventDefault();
+                });
+            });
+
+
+        </script>
+    </body>
+
+
+</html>
